@@ -1,30 +1,25 @@
 body {
-padding: 0;
-margin: 0 auto;
-}
+  padding: 0;
+  margin: 0 auto; }
 
 .navclass {
   background-color: grey;
   width: 29%;
   margin: 0px 0px 0px 0px;
   padding: 0;
-  display: inline-block;
+  display: inline-block; }
 
-  }
-
-div{
+div {
   padding: 0;
   margin: 0 auto;
-  display: none;
+  display: none; }
 
-}
-.picturebox{
+.picturebox {
   display: inline-block;
-  width:69%;
+  width: 69%;
   background-color: yellow;
   padding: 0;
-  margin: 0 auto;
-}
-.clickedElement{
-  display: inline-block;
-}
+  margin: 0 auto; }
+
+.clickedElement {
+  display: inline-block; }
