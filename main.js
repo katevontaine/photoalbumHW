@@ -1,8 +1,6 @@
 var pictures = [
 // animals:
-    {imgSrc1: 'animals/IMG_4610.jpg',
-    imgSrc2: 'animals/IMG_4330.jpg',
-    imgSrc3: 'animals/IMG_4611.jpg',
+    {imgSrc1: 'animals/IMG_4610.jpg', imgSrc2: 'animals/IMG_4330.jpg', imgSrc3: 'animals/IMG_4611.jpg',
    caption:"animals",
    names: 'album1'},
 
@@ -17,7 +15,7 @@ var pictures = [
     {imgSrc1:'blackandwhite/IMG_4070.jpg',
    imgSrc2: 'blackandwhite/IMG_4158.jpg',
    imgSrc3: 'blackandwhite/IMG_4332.jpg',
-   caption:"black and white",
+   caption: "black and white",
     names: 'album3'},
 
 
@@ -25,7 +23,7 @@ var pictures = [
     {imgSrc1: 'bluesky/IMG_4351.jpg',
    imgSrc2: 'bluesky/IMG_4482.jpg',
    imgSrc3: 'bluesky/IMG_4877.jpg',
-   caption:"blue sky",
+   caption: "blue sky",
    names: 'album4'},
 
 
@@ -49,18 +47,33 @@ var pictures = [
 $('nav li > a').on('click', function(event){
   // event.preventDefault();
   var clickedSection = "." + $(this).attr('rel');
-  console.log(clickedSection);
-  var theAlbum = "";
-
   $(clickedSection).addClass('clickedElement');
   $(clickedSection).siblings('div').removeClass('clickedElement');
   $(clickedSection).siblings('div').addClass('hideElement');
   $(clickedSection).removeClass('hideElement');
 
-  // var albumPics = _.pluck(pictures, function(item){
-  //     return "." + item.names
-  //   });
-  //   $(albumPics).append(clickedSection);
+  // var albumPics = _.pluck(pictures, 'names');
+  // console.log(albumPics);
+  // var albumPic = albumPics.map(function(names){
+  //   return "." + names;
+  // })
+  var albumPics = pictures.filter(function(el){
+
+   return el.names === clickedSection.split(".")[1]
+
+ });
+
+     console.log(albumPics);
+
+   var myTmpl = _.template($('#albumTemplate').html());
+   var htmlString = myTmpl(albumPics[0]);
+    $(clickedSection).append(htmlString);
+    //
+    // var thePics = _.each(pictures, function(item, idx, arr){
+    //       var myTmpl = _.template($('#albumTemplate').html());
+    //       var myHtmlString = myTmpl(item);
+    //     $(clickedSection).append(myHtmlString);
+    //   });
 
 });
 // var albumPics = _.filter(pictures), function(currVal){
@@ -71,14 +84,8 @@ $('nav li > a').on('click', function(event){
 //       console.log("." + [names])});
 //       // return "." + [name]});
 //       $(clickedSection).append(albumPics);
+// var picsHTML = "";
 
-  // var thePics = _.each(pictures, function(item, idx, arr){
-  //       var myTmpl = _.template($('#albumTemplate').html());
-  //       var myHtmlString = myTmpl(item);
-  //     $(clickedSection).append(myHtmlString);
-  //   });
-
-var picsHTML = "";
 $(document).ready(function () {
 
 // });
@@ -93,14 +100,14 @@ $(document).ready(function () {
 //     return currVal.imgSrc2;
 //     return currVal.imgSrc3;
 //     return currVal.caption
-// });
-
-var theAlbum = "";
-var thePics = _.each(pictures, function(item, idx, arr){
-      var myTmpl = _.template($('#albumTemplate').html());
-      var myHtmlString = myTmpl(item);
-    $('album1').append(myHtmlString);
-  });
+// // });
+//
+// var theAlbum = "";
+// var thePics = _.each(pictures, function(item, idx, arr){
+//       var myTmpl = _.template($('#albumTemplate').html());
+//       var myHtmlString = myTmpl(item);
+//     $('album1').append(myHtmlString);
+//   });
 
       // // "<div class='album'" + (idx +1)l + ">";
       // theAlbum += "<div class='clickedElement'>"
@@ -116,9 +123,11 @@ var thePics = _.each(pictures, function(item, idx, arr){
       // + "<img src='"
       // + item.imgSrc3
       // + "'>"
-      // + "</div>"
-
-      $('.clickedElement').html(theAlbum);
-
-      // console.log(thePics);
+      // // + "</div>"
+      //
+      // $('.clickedElement').html(theAlbum);
+      //
+      // // console.log(thePics);
       // $('.clickedSection').html(theAlbum);
+
+});
