@@ -5,16 +5,14 @@
     <title></title>
       <link rel="stylesheet" href="style.css" charset="utf-8">
 
-
         <script type="text/html" id="albumTemplate">
-          <article class="template" data-index="">
-            <h3><img src="<%= albumz %>"></h3>
-            <p><%= pictures =%></p>
+          <article class="templatePic" data-index="">
+            <li><img src="<%= caption %>"></li>
+            <li><img src="<%= imgSrc1 %>"></li>
+            <li><img src="<%= imgSrc2 %>"></li>
+            <li><img src="<%= imgSrc3 %>"></li>
           </article>
         </script>
-
-
-
 
 
 
@@ -35,12 +33,14 @@
         </section>
 
         <section class="picturebox">
-            <div class="album1 clickedElement"><p>album 1</p></div>
+            <div class="empty1 clickedElement"></div>
+            <div class="album1"><p>album 1</p></div>
             <div class="album2"><p>album 2</p></div>
             <div class="album3"><p>album 3</p></div>
             <div class="album4"><p>album 4</p></div>
             <div class="album5"><p>album 5</p></div>
             <div class="album6"><p>album 6</p></div>
+
 
         </section>
         <script src="bower_components/underscore/underscore.js"></script>

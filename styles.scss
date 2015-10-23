@@ -9,14 +9,15 @@ margin: 0 auto;
   margin: 0px 0px 0px 0px;
   padding: 0;
   display: inline-block;
-
   }
 
 div{
   padding: 0;
   margin: 0 auto;
+  display: inline;
+}
+.hideElement{
   display: none;
-
 }
 .picturebox{
   display: inline-block;
@@ -25,6 +26,24 @@ div{
   padding: 0;
   margin: 0 auto;
 }
+img{
+  max-height: 250px;
+  display: inline-block;
+}
 .clickedElement{
   display: inline-block;
+}
+.empty1 img{
+  max-height: 150px;
+  border-radius: 100%;
+  display: inline-block;
+  margin: 0auto;
+}
+.empty1{
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+h2{
+  font-size: 30px;
 }
