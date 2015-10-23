@@ -1,21 +1,21 @@
 var pictures = [
 // animals:
     {imgSrc1: 'animals/IMG_4610.jpg', imgSrc2: 'animals/IMG_4330.jpg', imgSrc3: 'animals/IMG_4611.jpg',
-   caption:"animals",
+   caption:"ANIMAL FRIENDS",
    names: 'album1'},
 
 // var flowers =
   {imgSrc1: 'flower/IMG_4876.jpg',
   imgSrc2: 'flower/IMG_4972.jpg',
   imgSrc3: 'flower/IMG_4929.jpg',
-   caption: "flowers",
+   caption: "FLOWERS",
  names: 'album2'},
 
 // var b&w =
     {imgSrc1:'blackandwhite/IMG_4070.jpg',
    imgSrc2: 'blackandwhite/IMG_4158.jpg',
    imgSrc3: 'blackandwhite/IMG_4332.jpg',
-   caption: "black and white",
+   caption: "BLACK & WHITE",
     names: 'album3'},
 
 
@@ -23,7 +23,7 @@ var pictures = [
     {imgSrc1: 'bluesky/IMG_4351.jpg',
    imgSrc2: 'bluesky/IMG_4482.jpg',
    imgSrc3: 'bluesky/IMG_4877.jpg',
-   caption: "blue sky",
+   caption: "BLUE SKIES",
    names: 'album4'},
 
 
@@ -32,7 +32,7 @@ var pictures = [
   imgSrc1: 'bridge/IMG_5390.jpg',
    imgSrc2: 'bridge/IMG_2659.jpg',
    imgSrc3: 'bridge/IMG_3013.jpg',
-   caption:"bridge",
+   caption:"COOPER RIVER BRIDGE",
    names: 'album5'},
 
 // var magnolia =
@@ -40,7 +40,7 @@ var pictures = [
     imgSrc1: 'magnolia/IMG_3196.jpg',
    imgSrc2: 'magnolia/IMG_3182.jpg',
    imgSrc3: 'magnolia/IMG_3186.jpg',
-   caption:"magnolia",
+   caption:"MAGNOLIAS",
    names: 'album6'
  }
 ]
@@ -58,16 +58,15 @@ $('nav li > a').on('click', function(event){
   //   return "." + names;
   // })
   var albumPics = pictures.filter(function(el){
-
    return el.names === clickedSection.split(".")[1]
-
  });
 
-     console.log(albumPics);
+    //  console.log(albumPics);
 
    var myTmpl = _.template($('#albumTemplate').html());
    var htmlString = myTmpl(albumPics[0]);
-    $(clickedSection).append(htmlString);
+    $(clickedSection).html(htmlString);
+
     //
     // var thePics = _.each(pictures, function(item, idx, arr){
     //       var myTmpl = _.template($('#albumTemplate').html());

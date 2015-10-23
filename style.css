@@ -1,13 +1,35 @@
 body {
   padding: 0;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-color: #FFFFCC; }
 
 .navclass {
-  background-color: grey;
-  width: 29%;
-  margin: 0px 0px 0px 0px;
+  background-color: #D8D8D8;
+  width: 18%;
+  margin: 0 auto;
   padding: 0;
-  display: inline-block; }
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  height: 1000px;
+  position: fixed; }
+  .navclass ul {
+    padding-left: 20px;
+    padding-top: 150px;
+    margin: 0 auto; }
+  .navclass li {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    padding: 0 5px 30px 5px; }
+    .navclass li a {
+      font-family: sans-serif;
+      text-decoration: none;
+      list-style: none;
+      color: #404040;
+      margin: 0 auto;
+      display: inline-block; }
 
 div {
   padding: 0;
@@ -19,16 +41,22 @@ div {
 
 .picturebox {
   display: inline-block;
-  width: 69%;
-  background-color: yellow;
-  padding: 0;
+  width: 80%;
+  background-color: #FFFFCC;
+  padding: 0 0 0 300px;
   margin: 0 auto; }
+  .picturebox li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 auto; }
+  .picturebox img {
+    border-radius: 50%;
+    display: inline-block; }
   .picturebox .empty1 {
     display: inline;
     padding: 0;
     margin: 0; }
     .picturebox .empty1 img {
-      max-height: 150px;
       border-radius: 100%;
       display: inline-block;
       margin: 0auto; }
@@ -42,5 +70,15 @@ div {
     margin: 0 auto; }
 
 h2 {
-  font-size: 30px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 50px;
+  margin: 0 auto;
+  text-align: center;
+  color: #404040; }
+
+.templatePic img {
+  max-height: 400px; }
+
+.templatePic li {
   margin: 0 auto; }
