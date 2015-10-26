@@ -54,12 +54,13 @@ div {
     display: inline-block; }
   .picturebox .empty1 {
     display: inline;
-    padding: 0;
     margin: 0; }
     .picturebox .empty1 img {
       border-radius: 100%;
       display: inline-block;
-      margin: 0auto; }
+      margin: 0auto;
+      max-height: 350px;
+      padding: 30px 10px 0 20px; }
 
 .clickedElement {
   display: inline-block; }
@@ -82,3 +83,6 @@ h2 {
 
 .templatePic li {
   margin: 0 auto; }
+
+.makeBig img {
+  max-height: 500px; }

@@ -44,89 +44,44 @@ var pictures = [
    names: 'album6'
  }
 ]
+
+var homePics = _.pluck(pictures, 'imgSrc1');
+var homeDisplayString = "";
+var homeDisplay = _.each(homePics, function (item, idx, arr){
+  return homeDisplayString += "<img src='"
+  + item
+  + "'>"
+  + "</div>"
+
+});
+
+$('.empty1').html(homeDisplayString);
+
+
+
 $('nav li > a').on('click', function(event){
   // event.preventDefault();
+
   var clickedSection = "." + $(this).attr('rel');
   $(clickedSection).addClass('clickedElement');
   $(clickedSection).siblings('div').removeClass('clickedElement');
   $(clickedSection).siblings('div').addClass('hideElement');
   $(clickedSection).removeClass('hideElement');
+  $('.empty1').hide();
 
-  // var albumPics = _.pluck(pictures, 'names');
-  // console.log(albumPics);
-  // var albumPic = albumPics.map(function(names){
-  //   return "." + names;
-  // })
+
   var albumPics = pictures.filter(function(el){
    return el.names === clickedSection.split(".")[1]
  });
 
-    //  console.log(albumPics);
 
    var myTmpl = _.template($('#albumTemplate').html());
    var htmlString = myTmpl(albumPics[0]);
     $(clickedSection).html(htmlString);
 
-    //
-    // var thePics = _.each(pictures, function(item, idx, arr){
-    //       var myTmpl = _.template($('#albumTemplate').html());
-    //       var myHtmlString = myTmpl(item);
-    //     $(clickedSection).append(myHtmlString);
-    //   });
 
-});
-// var albumPics = _.filter(pictures), function(currVal){
-//       return "." + [name]});
-//       $(clickedSection).append(albumPics);
 
-// var albumPics = pictures.filter(function(currVal){
-//       console.log("." + [names])});
-//       // return "." + [name]});
-//       $(clickedSection).append(albumPics);
-// var picsHTML = "";
-
-$(document).ready(function () {
-
-// });
-//
-// var imgSrc1 = pictures[0].imgSrc1;
-// var imgSrc2 = pictures[0].imgSrc2;
-// var imgSrc3 = pictures[0].imgSrc3;
-// var caption = pictures[0].caption;
-//
-// var picDisplay =  _.each(pictures, function (currVal, idx, arr) {
-//     return currVal.imgSrc1;
-//     return currVal.imgSrc2;
-//     return currVal.imgSrc3;
-//     return currVal.caption
-// // });
-//
-// var theAlbum = "";
-// var thePics = _.each(pictures, function(item, idx, arr){
-//       var myTmpl = _.template($('#albumTemplate').html());
-//       var myHtmlString = myTmpl(item);
-//     $('album1').append(myHtmlString);
-//   });
-
-      // // "<div class='album'" + (idx +1)l + ">";
-      // theAlbum += "<div class='clickedElement'>"
-      // +"<h2>"
-      // + item.caption
-      // +"</h2>"
-      // + "<img src='"
-      // + item.imgSrc1
-      // + "'>"
-      // + "<img src='"
-      // + item.imgSrc2
-      // + "'>"
-      // + "<img src='"
-      // + item.imgSrc3
-      // + "'>"
-      // // + "</div>"
-      //
-      // $('.clickedElement').html(theAlbum);
-      //
-      // // console.log(thePics);
-      // $('.clickedSection').html(theAlbum);
+   });
+   $(document).ready(function () {
 
 });
