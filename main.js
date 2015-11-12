@@ -1,38 +1,40 @@
 var pictures = [
 // animals:
-    {imgSrc1: 'animals/IMG_4610.jpg', imgSrc2: 'animals/IMG_4330.jpg', imgSrc3: 'animals/IMG_4611.jpg',
-   caption:"ANIMAL FRIENDS",
+    {imgSrc1: 'images/grace hopper.jpg',
+    imgSrc2: 'images/marissa.jpg',
+    imgSrc3: 'images/susan.jpg',
+   caption:"TECHNOLOGY",
    names: 'album1'},
 
 // var flowers =
-  {imgSrc1: 'flower/IMG_4876.jpg',
-  imgSrc2: 'flower/IMG_4972.jpg',
-  imgSrc3: 'flower/IMG_4929.jpg',
-   caption: "FLOWERS",
+  {imgSrc1: 'images/marina.jpg',
+  imgSrc2: 'images/kusama.jpg',
+  imgSrc3: 'images/sophie.jpg',
+   caption: "THE ARTS",
  names: 'album2'},
 
 // var b&w =
-    {imgSrc1:'blackandwhite/IMG_4070.jpg',
-   imgSrc2: 'blackandwhite/IMG_4158.jpg',
-   imgSrc3: 'blackandwhite/IMG_4332.jpg',
-   caption: "BLACK & WHITE",
+    {imgSrc1:'images/elizabethholmes.jpg',
+   imgSrc2: 'images/curie.jpg',
+   imgSrc3: 'images/IMG_4332.jpg',
+   caption: "SCIENCE",
     names: 'album3'},
 
 
 // var blueksy =
-    {imgSrc1: 'bluesky/IMG_4351.jpg',
-   imgSrc2: 'bluesky/IMG_4482.jpg',
-   imgSrc3: 'bluesky/IMG_4877.jpg',
-   caption: "BLUE SKIES",
+    {imgSrc1: 'images/indra.jpg',
+   imgSrc2: 'images/sheryl.jpg',
+   imgSrc3: 'images/megw.jpg',
+   caption: "BUSINESS",
    names: 'album4'},
 
 
 // var bridge =
     {
-  imgSrc1: 'bridge/IMG_5390.jpg',
-   imgSrc2: 'bridge/IMG_2659.jpg',
-   imgSrc3: 'bridge/IMG_3013.jpg',
-   caption:"COOPER RIVER BRIDGE",
+  imgSrc1: 'images/rondarousey.jpg',
+   imgSrc2: 'images/serenawilliams.jpg',
+   imgSrc3: 'images/missyfranklin.jpg',
+   caption:"ATHLETICS",
    names: 'album5'},
 
 // var magnolia =

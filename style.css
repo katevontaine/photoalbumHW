@@ -1,7 +1,14 @@
 body {
   padding: 0;
   margin: 0 auto;
-  background-color: #FFFFCC; }
+  background-color: #FFFFCC;
+  font-family: sans-serif; }
+
+h1 {
+  font-family: sans-serif;
+  color: #404040; }
+  h1 span {
+    font-size: 60px; }
 
 .navclass {
   background-color: #D8D8D8;
@@ -16,7 +23,7 @@ body {
   position: fixed; }
   .navclass ul {
     padding-left: 20px;
-    padding-top: 150px;
+    padding-top: 10px;
     margin: 0 auto; }
   .navclass li {
     text-decoration: none;
@@ -43,15 +50,18 @@ div {
   display: inline-block;
   width: 80%;
   background-color: #FFFFCC;
-  padding: 0 0 0 300px;
-  margin: 0 auto; }
+  padding: 5px 0px 0px 330px;
+  margin: 0 auto;
+  transition-timing-function: ease-out; }
   .picturebox li {
     list-style: none;
     display: inline-block;
     margin: 0 auto; }
   .picturebox img {
-    border-radius: 50%;
-    display: inline-block; }
+    max-height: 350px;
+    border-radius: 70%;
+    display: inline-block;
+    transition-timing-function: ease-out; }
   .picturebox .empty1 {
     display: inline;
     margin: 0; }
@@ -60,15 +70,18 @@ div {
       display: inline-block;
       margin: 0auto;
       max-height: 350px;
-      padding: 30px 10px 0 20px; }
+      transition-timing-function: ease-in-out;
+      padding-left: -30px; }
 
 .clickedElement {
-  display: inline-block; }
+  display: inline-block;
+  transition-timing-function: ease-out; }
   .clickedElement img {
-    max-height: 300px;
+    max-height: 250px;
     display: inline-block;
     padding: 0;
-    margin: 0 auto; }
+    margin: 0 auto;
+    transition-timing-function: ease-out; }
 
 h2 {
   margin: 0 auto;
@@ -79,7 +92,14 @@ h2 {
   color: #404040; }
 
 .templatePic img {
-  max-height: 400px; }
+  max-height: 350px;
+  transition-timing-function: ease-out;
+  margin: 0 auto; }
+
+.templatePic img:hover {
+  background-color: white;
+  opacity: .4;
+  color: #404040; }
 
 .templatePic li {
   margin: 0 auto; }

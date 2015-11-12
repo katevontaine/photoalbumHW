@@ -1,0 +1,98 @@
+body {
+  padding: 0;
+  margin: 0 auto;
+  background-color: #FFFFCC;
+  font-family: sans-serif; }
+
+h1 {
+  font-family: sans-serif; }
+
+.navclass {
+  background-color: #D8D8D8;
+  width: 18%;
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  height: 1000px;
+  position: fixed; }
+  .navclass ul {
+    padding-left: 20px;
+    padding-top: 150px;
+    margin: 0 auto; }
+  .navclass li {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    padding: 0 5px 30px 5px; }
+    .navclass li a {
+      font-family: sans-serif;
+      text-decoration: none;
+      list-style: none;
+      color: #404040;
+      margin: 0 auto;
+      display: inline-block; }
+
+div {
+  padding: 0;
+  margin: 0 auto;
+  display: inline; }
+
+.hideElement {
+  display: none; }
+
+.picturebox {
+  display: inline-block;
+  width: 80%;
+  background-color: #FFFFCC;
+  padding: 0 0 0 300px;
+  margin: 0 auto;
+  transition-timing-function: ease-out; }
+  .picturebox li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 auto; }
+  .picturebox img {
+    border-radius: 50%;
+    display: inline-block;
+    transition-timing-function: ease-out; }
+  .picturebox .empty1 {
+    display: inline;
+    margin: 0; }
+    .picturebox .empty1 img {
+      border-radius: 100%;
+      display: inline-block;
+      margin: 0auto;
+      max-height: 350px;
+      padding: 30px 10px 0 20px;
+      transition-timing-function: ease-in-out; }
+
+.clickedElement {
+  display: inline-block;
+  transition-timing-function: ease-out; }
+  .clickedElement img {
+    max-height: 300px;
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto;
+    transition-timing-function: ease-out; }
+
+h2 {
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 50px;
+  margin: 0 auto;
+  text-align: center;
+  color: #404040; }
+
+.templatePic img {
+  max-height: 400px;
+  transition-timing-function: ease-out; }
+
+.templatePic li {
+  margin: 0 auto; }
+
+.makeBig img {
+  max-height: 500px; }
